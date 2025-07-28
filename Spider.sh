@@ -57,10 +57,10 @@ EOF
 
 echo -e "${NC}"
 
-echo "${CYAN}===========================${NC}"
-echo "${BOLD}${YELLOW}   SPIDER MADE BY D3C0D3D      ${NC} "
-echo "${RED}         version 1.0.1          ${NC} "
-echo "${CYAN}===========================${NC}"
+echo -e "${CYAN}===========================${NC}"
+echo -e "${BOLD}${YELLOW}   SPIDER MADE BY D3C0D3D      ${NC} "
+echo -e "${RED}         version 1.0.1          ${NC} "
+echo -e "${CYAN}===========================${NC}"
 
 
 echo ""
