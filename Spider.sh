@@ -64,8 +64,8 @@ echo -e "${CYAN}===========================${NC}"
 
 
 echo ""
-echo "[1] FACEBOOK page"
-echo "[0] EXIT"
+echo -e "${RED}[${GREEN}1${RED}]${BOLD} FACEBOOK page ${NC}"
+echo "${RED}[${GREEN}0${RED}]${BOLD} EXIT ${NC}"
 echo ""
 read -p "Select Website For Your Victim: " choice
 
