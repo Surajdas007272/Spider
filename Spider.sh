@@ -73,6 +73,11 @@ if [ "$choice" == "1" ]; then
   curl -L -o Facebook.py https://raw.githubusercontent.com/Surajdas007272/Spider/main/Facebook.py
   python Facebook.py
 
+  sleep 3
+  echo -e ${CYAN}" ctrl + c For Exit" ${NC}
+
+  echo -e ${CYAN} " http://127.0.0.1:5000 " ${NC}
+
 elif [ "$choice" == "0" ]; then
   echo "Good Bye"
   sleep 2
